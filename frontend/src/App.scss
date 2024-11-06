@@ -1,0 +1,14 @@
+@import "styles/agGrid";
+
+// Main spinner
+.spin-content {
+  padding: 50px;
+  border-radius: 4px;
+}
+
+
+// Antd Card 
+.ant-card.ant-card-bordered {
+  // Add shadow to cards
+  box-shadow: 0 2px 8px rgb(0 0 0 / 9%);
+}

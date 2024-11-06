@@ -1,0 +1,106 @@
+/* stylelint-disable selector-class-pattern */
+
+@use "@ag-grid-community/styles" as ag;
+@include ag.grid-styles(
+  (
+    themes: (
+      balham,
+      balham-dark,
+    ),
+  )
+);
+
+.ag-theme-balham {
+  .ag-header {
+    border-bottom: 0;
+    background-color: #f1f3f9;
+
+    .ag-header-cell {
+      padding-right: 4px;
+      padding-left: 8px;
+
+      &.ag-column-first {
+        padding-left: 12px;
+      }
+
+      &.ag-column-last {
+        padding-right: 12px;
+      }
+
+      &.ag-right-aligned-header {
+        padding-right: 8px;
+        padding-left: 4px;
+      }
+    }
+  }
+
+  // Apply/Clear buttons
+  .ag-filter {
+    .ag-filter-apply-panel {
+      .ag-button {
+        border: 1px solid;
+        border-radius: 4px;
+        padding: 2px 6px;
+
+        // submit button
+        &[type="submit"] {
+          background-color: #a2dbd4;
+          border-color: #a2dbd4;
+        }
+
+        // reset button
+        &[type="button"] {
+          color: #bc1e1e;
+          border-color: #bc1e1e;
+        }
+      }
+    }
+  }
+
+  // Header text
+  div.ag-header span.ag-header-cell-text {
+    text-transform: uppercase;
+    font-size: 10px;
+    white-space: normal;
+    font-weight: bold;
+    color: #1d2433;
+  }
+
+  .ag-row {
+    // Grand total row
+    &.ag-row-footer.ag-row-level--1 {
+      background-color: rgb(132 255 142 / 50%);
+      font-weight: bold;
+    }
+
+    &.ag-row-odd {
+      background-color: #edeef3;
+    }
+
+    &.ag-row-pinned {
+      background-color: #dbdce4;
+    }
+  }
+
+  .ag-root-wrapper {
+    // Remove border from the grid
+    border: 0;
+  }
+
+  .ag-cell-focus {
+    background-color: rgb(0 125 203 / 28%);
+  }
+}
+
+.editable-column-header {
+  background-color: #0b456f !important;
+}
+
+.editable-cell {
+  text-align: right !important;
+  background-color: #98d4ff40 !important;
+}
+
+.ag-floating-bottom {
+  margin-bottom: 10px;
+}
